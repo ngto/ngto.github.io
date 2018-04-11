@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>ngto</title>
+      <link href="/2018/04/11/ngto/"/>
+      <url>/2018/04/11/ngto/</url>
+      <content type="html"><![CDATA[<p>test</p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>browserSync使用说明</title>
+      <link href="/2017/04/12/browserSync%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+      <url>/2017/04/12/browserSync%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<h3 id="browserSync-使用教程"><a href="#browserSync-使用教程" class="headerlink" title="browserSync 使用教程"></a>browserSync 使用教程</h3><p>Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。更重要的是 Browsersync可以同时在PC、平板、手机等设备下进项调试。您可以想象一下：“假设您的桌子上有pc、ipad、iphone、android等设备，同时打开了您需要调试的页面，当您使用browsersync后，您的任何一次代码保存，以上的设备都会同时显示您的改动”。无论您是前端还是后端工程师，使用它将提高您30%的工作效率。</p><h4 id="1、安装browserSync到全局"><a href="#1、安装browserSync到全局" class="headerlink" title="1、安装browserSync到全局"></a>1、安装browserSync到全局</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g browser-sync</span><br></pre></td></tr></table></figure><h4 id="2、使用-如果你的文件层级比较深，您可以考虑使用-（表示任意目录）匹配，任意目录下任意-css-或-html文件。"><a href="#2、使用-如果你的文件层级比较深，您可以考虑使用-（表示任意目录）匹配，任意目录下任意-css-或-html文件。" class="headerlink" title="2、使用(如果你的文件层级比较深，您可以考虑使用 **（表示任意目录）匹配，任意目录下任意.css 或 .html文件。)"></a>2、使用(如果你的文件层级比较深，您可以考虑使用 **（表示任意目录）匹配，任意目录下任意.css 或 .html文件。)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">browser-sync start --server --files &quot;**/*.css, **/*.html,**/*.js&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>移动端适配方案</title>
+      <link href="/2017/04/12/%E5%89%8D%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94/"/>
+      <url>/2017/04/12/%E5%89%8D%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94/</url>
+      <content type="html"><![CDATA[<h4 id="1、-root-rem-实现移动端适配"><a href="#1、-root-rem-实现移动端适配" class="headerlink" title="1、:root + rem 实现移动端适配"></a>1、:root + rem 实现移动端适配</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">calc</span>(1vw + 1vh + .5vmin);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">1rem</span>/<span class="number">1.6</span> sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="vh和vw"><a href="#vh和vw" class="headerlink" title="vh和vw"></a>vh和vw</h5><blockquote><p>1vh 等于1/100的视口高度。栗子：浏览器高度900px, 1 vh = 900px/100 = 9 px。<br>同理，如果视口宽度750， 1vw = 750px/100 = 7.5 px。<br>窗口大小变化可更改根节点的font-size从而实现自适应</p></blockquote><h5 id="vmin-和-vmax"><a href="#vmin-和-vmax" class="headerlink" title="vmin 和 vmax"></a>vmin 和 vmax</h5><blockquote><p>vh和 vw 依据于视口的高度和宽度，相对的，vmin 和 vmax则关于视口高度和宽度两者的最小或者最大值。<br>比如，浏览器的宽度设置为1100px，高度设置为700px， 1vmin = 1px， 1vmax = 11px。<br>如果宽度设置为800px,高度设置为1080px, 1vmin就等于8px, 1vmax则未10.8px。</p></blockquote><h4 id="2、使用css的媒体查询"><a href="#2、使用css的媒体查询" class="headerlink" title="2、使用css的媒体查询"></a>2、使用css的媒体查询</h4><h4 id="3、还是使用rem，然后通过js更改根节点的font-size值"><a href="#3、还是使用rem，然后通过js更改根节点的font-size值" class="headerlink" title="3、还是使用rem，然后通过js更改根节点的font-size值"></a>3、还是使用rem，然后通过js更改根节点的font-size值</h4>]]></content>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> js </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/hexo-admin-ehc-images.json"/>
+      <url>/hexo-admin-ehc-images.json</url>
+      <content type="html"><![CDATA[[{"name":"DASHENG-900x700-1.png","date":1518959551960},{"name":"DASHENG-900x700-2.png","date":1518959599098},{"name":"DASHENG-900x700-3.png","date":1518959609913},{"name":"DASHENG-900x700-4.png","date":1518959618105}]]]></content>
+    </entry>
+    
+    <entry>
+      <title>ngto</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>javascript</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>timeline</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+  
+</search>
