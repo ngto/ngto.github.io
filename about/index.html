@@ -24,8 +24,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
 
-        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
 
 
 
@@ -418,23 +418,51 @@
                 <!-- Post Comments -->
                 
                     
-    <!-- 使用 来必力 -->
-<div id="livere-comment">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTYyOS8xMjE2NQ==">
-	<script type="text/ls-javascript" id="livere-comment-js">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-       if (typeof LivereTower === 'function') { return; }
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-</div>
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="about/index.html"></div>
+<script type="text/javascript">
+    (function () {
+        var appid = 'cytAsStBs';
+        var conf = 'prod_8517d3b5da26069857c70c4f904d9e7e';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+        } else {
+            var loadJs = function (d, a) {
+                var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+                var b = document.createElement("script");
+                b.setAttribute("type", "text/javascript");
+                b.setAttribute("charset", "UTF-8");
+                b.setAttribute("src", d);
+                if (typeof a === "function") {
+                    if (window.attachEvent) {
+                        b.onreadystatechange = function () {
+                            var e = b.readyState;
+                            if (e === "loaded" || e === "complete") {
+                                b.onreadystatechange = null;
+                                a()
+                            }
+                        }
+                    } else {
+                        b.onload = a
+                    }
+                }
+                c.appendChild(b)
+            };
+            loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+                window.changyan.api.config({
+                    appid: appid,
+                    conf: conf
+                })
+            });
+        }
+    })();
+</script>
 </div>
 <style>
-    #livere-comment{
+    #changyan-comment{
         background-color: #eee;
         padding: 2pc;
     }
@@ -709,7 +737,10 @@
 
 
 
-   
+   <!-- 畅言公共 js 代码 start -->
+<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytAsStBs">
+</script>
+<!-- 畅言公共 js 代码 end -->
 
 
 
