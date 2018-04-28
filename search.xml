@@ -11,25 +11,6 @@
       
     </entry>
     
-    <entry>
-      <title>移动端适配方案</title>
-      <link href="/2017/04/12/%E5%89%8D%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94/"/>
-      <url>/2017/04/12/%E5%89%8D%E7%AB%AF%E8%87%AA%E9%80%82%E5%BA%94/</url>
-      <content type="html"><![CDATA[<h4 id="1、-root-rem-实现移动端适配"><a href="#1、-root-rem-实现移动端适配" class="headerlink" title="1、:root + rem 实现移动端适配"></a>1、:root + rem 实现移动端适配</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">calc</span>(1vw + 1vh + .5vmin);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">1rem</span>/<span class="number">1.6</span> sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="vh和vw"><a href="#vh和vw" class="headerlink" title="vh和vw"></a>vh和vw</h5><blockquote><p>1vh 等于1/100的视口高度。栗子：浏览器高度900px, 1 vh = 900px/100 = 9 px。<br>同理，如果视口宽度750， 1vw = 750px/100 = 7.5 px。<br>窗口大小变化可更改根节点的font-size从而实现自适应</p></blockquote><h5 id="vmin-和-vmax"><a href="#vmin-和-vmax" class="headerlink" title="vmin 和 vmax"></a>vmin 和 vmax</h5><blockquote><p>vh和 vw 依据于视口的高度和宽度，相对的，vmin 和 vmax则关于视口高度和宽度两者的最小或者最大值。<br>比如，浏览器的宽度设置为1100px，高度设置为700px， 1vmin = 1px， 1vmax = 11px。<br>如果宽度设置为800px,高度设置为1080px, 1vmin就等于8px, 1vmax则未10.8px。</p></blockquote><h4 id="2、使用css的媒体查询"><a href="#2、使用css的媒体查询" class="headerlink" title="2、使用css的媒体查询"></a>2、使用css的媒体查询</h4><h4 id="3、还是使用rem，然后通过js更改根节点的font-size值"><a href="#3、还是使用rem，然后通过js更改根节点的font-size值" class="headerlink" title="3、还是使用rem，然后通过js更改根节点的font-size值"></a>3、还是使用rem，然后通过js更改根节点的font-size值</h4>]]></content>
-      
-      
-        <tags>
-            
-            <tag> css </tag>
-            
-            <tag> js </tag>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
   
   
     
@@ -55,16 +36,16 @@
     </entry>
     
     <entry>
-      <title>timeline</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title>javascript</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>javascript</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>timeline</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
