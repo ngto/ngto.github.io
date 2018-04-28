@@ -2,15 +2,6 @@
 <search> 
   
     
-    <entry>
-      <title>browserSync使用说明</title>
-      <link href="/2017/04/12/browserSync%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
-      <url>/2017/04/12/browserSync%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
-      <content type="html"><![CDATA[<h3 id="browserSync-使用教程"><a href="#browserSync-使用教程" class="headerlink" title="browserSync 使用教程"></a>browserSync 使用教程</h3><p>Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。更重要的是 Browsersync可以同时在PC、平板、手机等设备下进项调试。您可以想象一下：“假设您的桌子上有pc、ipad、iphone、android等设备，同时打开了您需要调试的页面，当您使用browsersync后，您的任何一次代码保存，以上的设备都会同时显示您的改动”。无论您是前端还是后端工程师，使用它将提高您30%的工作效率。</p><h4 id="1、安装browserSync到全局"><a href="#1、安装browserSync到全局" class="headerlink" title="1、安装browserSync到全局"></a>1、安装browserSync到全局</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g browser-sync</span><br></pre></td></tr></table></figure><h4 id="2、使用-如果你的文件层级比较深，您可以考虑使用-（表示任意目录）匹配，任意目录下任意-css-或-html文件。"><a href="#2、使用-如果你的文件层级比较深，您可以考虑使用-（表示任意目录）匹配，任意目录下任意-css-或-html文件。" class="headerlink" title="2、使用(如果你的文件层级比较深，您可以考虑使用 **（表示任意目录）匹配，任意目录下任意.css 或 .html文件。)"></a>2、使用(如果你的文件层级比较深，您可以考虑使用 **（表示任意目录）匹配，任意目录下任意.css 或 .html文件。)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">browser-sync start --server --files &quot;**/*.css, **/*.html,**/*.js&quot;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-    </entry>
-    
   
   
     
