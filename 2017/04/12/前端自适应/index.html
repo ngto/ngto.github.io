@@ -45,7 +45,7 @@
     
     <title>
         
-            ngto | 
+            移动端适配方案 | 
         
         ngto-bolg
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",css,js,前端">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="ngto-bolg">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2017/04/12/前端自适应/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ngto-bolg">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about/">
+    <meta property="og:url" content="http://yoursite.com/2017/04/12/前端自适应/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="ngto | ngto-bolg">
+    <meta property="og:title" content="移动端适配方案 | ngto-bolg">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="css"> <meta property="og:article:tag" content="js"> <meta property="og:article:tag" content="前端"> 
 
+    
+        <meta property="article:published_time" content="Wed Apr 12 2017 10:42:29 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jun 14 2019 10:22:18 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/04/12/前端自适应/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/04/12/前端自适应/index.html",
+    "headline": "移动端适配方案",
+    "datePublished": "Wed Apr 12 2017 10:42:29 GMT+0800",
+    "dateModified": "Fri Jun 14 2019 10:22:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ngto",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "ngto-bolg",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",css,js,前端",
+    "description": "",
+}
+</script>
 
 
     
@@ -288,6 +321,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、-root-rem-实现移动端适配"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、:root + rem 实现移动端适配</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#vh和vw"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">vh和vw</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#vmin-和-vmax"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">vmin 和 vmax</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、使用css的媒体查询"><span class="post-toc-number">2.</span> <span class="post-toc-text">2、使用css的媒体查询</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3、还是使用rem，然后通过js更改根节点的font-size值"><span class="post-toc-number">3.</span> <span class="post-toc-text">3、还是使用rem，然后通过js更改根节点的font-size值</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -314,7 +380,7 @@
         
     
             <p class="article-headline-p">
-                ngto
+                移动端适配方案
             </p>
         </div>
 
@@ -333,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ngto</strong>
-        <span>1月 11, 2018</span>
+        <span>4月 12, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -351,6 +417,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/css/">css</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/js/">js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/前端/">前端</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -365,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ngto&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=移动端适配方案&url=http://yoursite.com/2017/04/12/前端自适应/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -386,7 +461,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ngto-bolg&title=ngto&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=ngto-bolg&title=移动端适配方案&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/04/12/前端自适应/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -405,7 +480,15 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h4 id="1、-root-rem-实现移动端适配"><a href="#1、-root-rem-实现移动端适配" class="headerlink" title="1、:root + rem 实现移动端适配"></a>1、:root + rem 实现移动端适配</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">calc</span>(1vw + 1vh + .5vmin);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">1rem</span>/<span class="number">1.6</span> sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="vh和vw"><a href="#vh和vw" class="headerlink" title="vh和vw"></a>vh和vw</h5><blockquote>
+<p>1vh 等于1/100的视口高度。栗子：浏览器高度900px, 1 vh = 900px/100 = 9 px。<br>同理，如果视口宽度750， 1vw = 750px/100 = 7.5 px。<br>窗口大小变化可更改根节点的font-size从而实现自适应</p>
+</blockquote>
+<h5 id="vmin-和-vmax"><a href="#vmin-和-vmax" class="headerlink" title="vmin 和 vmax"></a>vmin 和 vmax</h5><blockquote>
+<p>vh和 vw 依据于视口的高度和宽度，相对的，vmin 和 vmax则关于视口高度和宽度两者的最小或者最大值。<br>比如，浏览器的宽度设置为1100px，高度设置为700px， 1vmin = 1px， 1vmax = 11px。<br>如果宽度设置为800px,高度设置为1080px, 1vmin就等于8px, 1vmax则未10.8px。</p>
+</blockquote>
+<h4 id="2、使用css的媒体查询"><a href="#2、使用css的媒体查询" class="headerlink" title="2、使用css的媒体查询"></a>2、使用css的媒体查询</h4><h4 id="3、还是使用rem，然后通过js更改根节点的font-size值"><a href="#3、还是使用rem，然后通过js更改根节点的font-size值" class="headerlink" title="3、还是使用rem，然后通过js更改根节点的font-size值"></a>3、还是使用rem，然后通过js更改根节点的font-size值</h4>
         
     
 
@@ -421,7 +504,7 @@
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="about/index.html"></div>
+<div id="SOHUCS" sid="2017/04/12/前端自适应/"></div>
 <script type="text/javascript">
     (function () {
         var appid = 'cytAsStBs';
@@ -474,6 +557,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017/04/12/browserSync使用说明/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -617,6 +708,14 @@
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
